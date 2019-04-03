@@ -1,0 +1,18 @@
+[package]
+name = "thread-count"
+version = "0.1.0"
+authors = ["Anton Kuzmin <thehappycoder@gmail.com>"]
+license = "MIT"
+build = "build.rs"
+exclude = ["artifacts.json", "index.node"]
+
+[lib]
+name = "thread_count"
+crate-type = ["dylib"]
+
+[build-dependencies]
+neon-build = "0.2.0"
+
+[dependencies]
+neon = "0.2.0"
+num_cpus = "1.10.0"
